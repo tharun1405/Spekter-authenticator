@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="https://kit.fontawesome.com/f032d07051.js"></script>
+	<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #330055;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%233a015d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23410165' cx='50' cy='100' r='50'/%3E%3Cg fill='%2348026e' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23500376' cx='50' cy='200' r='50'/%3E%3Cg fill='%2357047e' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%235f0587' cx='50' cy='300' r='50'/%3E%3Cg fill='%2367068f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%236f0798' cx='50' cy='400' r='50'/%3E%3Cg fill='%237707a0' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%238008a9' cx='50' cy='500' r='50'/%3E%3Cg fill='%238909b1' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239109ba' cx='50' cy='600' r='50'/%3E%3Cg fill='%239a09c3' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a309cb' cx='50' cy='700' r='50'/%3E%3Cg fill='%23ad09d4' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b608dc' cx='50' cy='800' r='50'/%3E%3Cg fill='%23c007e5' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c905ee' cx='50' cy='900' r='50'/%3E%3Cg fill='%23d303f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23D0F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: contain; */
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #000000;
+            overflow: hidden;
+            border-radius: 0px 0px 70px 70px;
+            text-align: center;
+        }
+
+        .navbar img {
+            height: 90px;
+            width: auto;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .upload_search {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .upload_search form {
+            display: inline-block;
+        }
+
+        .upload_search input[type="text"] {
+            padding: 12px 0px 10px 30px;
+            width: 900px;
+            border: 2px solid #000000;
+            border-radius: 50px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .upload_search button {
+            padding: 10px 12px 10px 12px;
+            background-color: #ff8800;
+            color: #ffffff;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        .upload_search button:hover {
+            background-color: #ea7d00;
+        }
+
+        .upload_part {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            gap: -100px;
+        } 
+
+        .upload_photo {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.265);
+            text-align: center;
+            max-width: 800px;
+            margin: 100px auto;
+        }
+
+        .upload_photo h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .upload_photo form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .upload_photo input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .upload_photo input[type="file"]:hover {
+            border-color: #ea7d00;
+        }
+
+        .upload_photo button {
+            background: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .upload_photo button:hover {
+            background: #0056b3;
+        }  
+
+        .upload_photo1 {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.265);
+            text-align: center;
+            max-width: 800px;
+            display: none;
+            margin: 100px auto;
+        }
+
+        .upload_photo1 h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .upload_photo1 form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .upload_photo1 input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .upload_photo1 input[type="file"]:hover {
+            border-color: #ea7d00;
+        }
+
+        .upload_photo1 button {
+            background: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .upload_photo1 button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            background-color: #000000;
+            border-radius: 100px 100px 0px 0px;
+            color: #fff;
+            text-align: center;
+            padding: 2px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer {
+            font-size: 7px;
+            line-height: 1.5;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar {                      
+                border-radius: 0px 0px 60px 60px;
+            }
+
+            .upload_search input[type="text"] {
+                width: 250px;
+                font-size: 12px;
+            }
+
+            .upload_search button {
+                font-size: 15px;
+            }
+
+            .upload_part {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .upload_photo {
+                text-align: center;
+                width: 250px;
+                height: 130px;
+                margin: 0px 0px 0px 0px;
+            }
+
+            .upload_photo h1 {
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                color: #000000;
+            }
+
+            .upload_photo input[type="file"] {
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 2px solid #ea7d00;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: border-color 0.3s;
+            }
+
+            .upload_photo input[type="file"]:hover {
+                border-color: #007BFF;
+            }
+
+            .upload_photo button {
+                background: #ea7d00;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 17px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .upload_photo button:hover {
+                background: #ff8801;
+            }
+
+            .upload_photo1 {
+                text-align: center;
+                width: 250px;
+                height: 130px;
+                display: block;
+                margin: 25px 0px 15px 0px;
+            }
+
+            .upload_photo1 h1 {
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                color: #000000;
+            }
+
+            .footer {
+                font-size: 6px;
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    </div>
+
+        <div class="upload_search">
+            <form action="/search" method="post">
+                <input type="text" name="search_id" placeholder="Enter Photo ID" required>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="upload_part">
+            <div class="upload_photo1">
+                <h1>Capture a Photo</h1>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="camera_file" accept="image/*" capture="camera">
+                    <button type="submit">Upload</button>
+                </form>
+            </div> 
+            <div class="upload_photo">
+                <h1>Upload Document</h1>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" accept="image/*" required>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h1>&copy; Copyrights 2024 All Rigths Reserved<br> Designed and Developed by Spekter AIGS</h1>
+        </div>
+</body>
+</html>
